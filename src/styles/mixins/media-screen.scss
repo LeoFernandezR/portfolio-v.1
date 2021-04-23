@@ -1,0 +1,25 @@
+@import '../base/variables.scss';
+
+@mixin for-phone-only {
+  @media screen and (max-device-width: $mobileWidth) {
+    @content;
+  }
+}
+
+@mixin for-small-tablet-only {
+  @media screen and (max-device-width: $smallTabletWidth) {
+    @content;
+  }
+}
+
+@mixin for-large-tablet-only {
+  @media screen and (max-device-width: $largeTabletWidth) {
+    @content;
+  }
+}
+
+@mixin for-small-desktop-only {
+  @media screen and (max-device-width: $smallDesktopWidth) {
+    @content;
+  }
+}
