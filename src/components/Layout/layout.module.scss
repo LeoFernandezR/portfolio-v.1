@@ -1,8 +1,12 @@
+@import '../../styles/base/variables.scss';
+@import '../../styles/mixins/media-screen.scss/';
+
 .background {
   height: 100vh;
   background-color: black;
   padding: 0;
   margin: 0;
+  font-family: $font;
 }
 
 .container {
