@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import Navbar from '../Navbar/Navbar'
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header
     style={{
       background: `rebeccapurple`,
