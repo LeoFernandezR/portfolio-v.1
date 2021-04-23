@@ -24,6 +24,7 @@
     "typeface-roboto": "^1.1.13"
   },
   "devDependencies": {
+    "@iconify/react-with-api": "^1.0.0-rc.7",
     "prettier": "2.2.1"
   },
   "keywords": [
