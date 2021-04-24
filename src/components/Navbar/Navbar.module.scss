@@ -2,13 +2,15 @@
 @import '../../styles/mixins/media-screen.scss';
 
 .navbar {
-  text-align: center;
-
   a {
     font-size: 1.6rem;
     font-family: $font;
     color: $white;
     text-decoration: none;
     margin-right: 1.2rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
