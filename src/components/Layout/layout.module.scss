@@ -1,5 +1,14 @@
 @import '../../styles/base/variables.scss';
-@import '../../styles/mixins/media-screen.scss/';
+@import '../../styles/mixins/media-screen.scss';
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 .background {
   background: rgb(45, 51, 57);
