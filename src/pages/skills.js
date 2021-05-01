@@ -2,12 +2,13 @@ import * as React from 'react'
 
 import Layout from '../components/Layout/Layout'
 import Seo from '../components/Seo/Seo'
+import Skills from '../components/Skills/Skills'
 
-const Skills = () => (
+const SkillsPage = () => (
   <Layout>
     <Seo title='Skills' />
-    <h1>My Skills</h1>
+    <Skills />
   </Layout>
 )
 
-export default Skills
+export default SkillsPage
