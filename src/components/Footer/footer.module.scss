@@ -1,0 +1,28 @@
+@import '../../styles/base/variables.scss';
+@import '../../styles/mixins/media-screen.scss';
+
+.footer {
+  padding: 2.5rem 0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 70%;
+  margin: 0 auto;
+  text-align: end;
+  font-size: 1.2rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.footer__nav {
+  color: $white;
+
+  a {
+    margin-right: 1rem;
+    color: inherit;
+    font-size: 1.4rem;
+  }
+}

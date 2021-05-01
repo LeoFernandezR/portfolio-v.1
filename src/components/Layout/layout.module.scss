@@ -25,6 +25,10 @@
   padding: 0;
   margin: 0;
   font-family: $font;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .container {
