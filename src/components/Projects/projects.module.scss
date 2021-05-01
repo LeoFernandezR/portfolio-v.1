@@ -1,0 +1,8 @@
+@import '../../styles/base/variables.scss';
+@import '../../styles/mixins/media-screen.scss';
+
+.projects__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
