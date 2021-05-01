@@ -1,14 +1,15 @@
 import React from 'react'
 import Layout from '../components/Layout/Layout'
 import Seo from '../components/Seo/Seo'
+import Projects from '../components/Projects/Projects'
 
-const Projects = () => {
+const ProjectsPage = () => {
   return (
     <Layout>
       <Seo title='Projects' />
-      <h1>My projects</h1>
+      <Projects />
     </Layout>
   )
 }
 
-export default Projects
+export default ProjectsPage
