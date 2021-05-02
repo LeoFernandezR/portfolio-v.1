@@ -5,10 +5,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0;
+  padding: 4rem 0;
 }
 .contact__form {
-  flex: 1 1 0%;
+  flex: 1;
   padding-right: 2rem;
   input,
   textarea {
@@ -17,6 +17,7 @@
     border: 3px solid $primaryColor;
     padding: 0.8rem 1rem;
     margin-bottom: 0.5rem;
+    outline: none;
   }
   button {
     background-color: $primaryColor;
@@ -35,8 +36,22 @@
     }
   }
 }
+.input__wrapper {
+  margin-bottom: 0.5rem;
+  .input__error {
+    border-color: #ff4136;
+  }
+  span {
+    display: block;
+    color: #ff4136;
+    font-size: 0.9rem;
+    padding-left: 0.8rem;
+  }
+}
+
 .contact__image {
-  width: 40rem;
+  flex: 1;
+  // flex: 1;
   img {
     width: 100%;
     height: 100%;
