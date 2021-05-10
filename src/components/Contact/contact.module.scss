@@ -3,9 +3,8 @@
 
 .contact {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  padding: 4rem 0;
 }
 .contact__form {
   flex: 1;
@@ -34,6 +33,13 @@
     &:focus {
       filter: saturate(1.8);
     }
+
+    &:disabled {
+      filter: saturate(0);
+    }
+  }
+  h4 {
+    color: $white;
   }
 }
 .input__wrapper {
@@ -51,7 +57,6 @@
 
 .contact__image {
   flex: 1;
-  // flex: 1;
   img {
     width: 100%;
     height: 100%;

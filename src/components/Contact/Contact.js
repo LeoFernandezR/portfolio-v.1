@@ -1,6 +1,7 @@
 import React from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
+import ReCAPTCHA from 'react-google-recaptcha'
 import emailjs from 'emailjs-com'
 
 import {
@@ -13,10 +14,24 @@ import {
 
 import MailDeliver from '../../images/mail-deliver.svg'
 
+console.log()
+
 const Contact = () => {
-  const onFormSubmit = (data, things) => {
-    console.log('data', data)
-    console.log('thingies', things)
+  const onFormSubmit = (data, { setFieldValue, resetForm }) => {
+    emailjs
+      .send('gmail', 'basic_template', data, process.env.GATSBY_EMAILJS_USER_ID)
+      .then(
+        ({ status }) => {
+          console.log(status)
+          setFieldValue('success', true)
+          setTimeout(() => resetForm(), 6000)
+        },
+        err => {
+          setFieldValue('success', false)
+          alert('Something went wrong, please try again!')
+          console.error(err)
+        }
+      )
   }
   return (
     <section className={contact}>
@@ -25,6 +40,7 @@ const Contact = () => {
           name: '',
           email: '',
           message: '',
+          'g-recaptcha-response': '',
           success: false,
         }}
         validationSchema={Yup.object().shape({
@@ -33,6 +49,9 @@ const Contact = () => {
             .email('Invalid email')
             .required('Email field is required'),
           message: Yup.string().required('Message field is required'),
+          'g-recaptcha-response': Yup.string().required(
+            'Robots are not welcome yet!'
+          ),
         })}
         onSubmit={onFormSubmit}
       >
@@ -65,7 +84,7 @@ const Contact = () => {
             <div className={input__wrapper}>
               <Field
                 component='textarea'
-                type='text'
+                as='textarea'
                 id='message'
                 name='message'
                 aria-label='message'
@@ -77,6 +96,24 @@ const Contact = () => {
               />
               <ErrorMessage component='span' name='message' />
             </div>
+            {values.name && values.email && values.message && (
+              <div className={input__wrapper}>
+                <Field
+                  component={ReCAPTCHA}
+                  as={ReCAPTCHA}
+                  sitekey={process.env.GATSBY_RECAPTCHA_KEY}
+                  name='g-recaptcha-response'
+                  onChange={value =>
+                    setFieldValue('g-recaptcha-response', value)
+                  }
+                />
+              </div>
+            )}
+            {values.success && (
+              <h4>
+                Your message has been succesfully sent! I will get back to you
+              </h4>
+            )}
 
             <button type='submit' disabled={isSubmitting}>
               Submit
