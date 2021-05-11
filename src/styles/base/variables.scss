@@ -1,8 +1,12 @@
 $primaryColor: #5fb49c;
 $black: #000000;
 $white: #ffffff;
-$darkBackground: #212529;
 $font: 'Roboto', sans-serif;
+$darkBackground: #1c2022;
+$lightDarkBackground: #24292e;
+
+$backgroundConfig: $darkBackground 0%, $darkBackground 60%,
+  $lightDarkBackground 60%, $lightDarkBackground 100%;
 
 $mobileWidth: 576px;
 $smallTabletWidth: 768px;

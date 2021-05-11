@@ -1,5 +1,6 @@
 @import '../../styles/base/variables.scss';
 @import '../../styles/mixins/media-screen.scss';
+@import '../../styles/mixins/linear-gradient.scss';
 
 html {
   box-sizing: border-box;
@@ -11,26 +12,8 @@ html {
 }
 
 .background {
-  background: rgb(45, 51, 57);
-  background: -moz-linear-gradient(
-    180deg,
-    rgba(45, 51, 57, 1) 0%,
-    rgba(36, 41, 46, 1) 50%,
-    rgba(27, 31, 34, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    180deg,
-    rgba(45, 51, 57, 1) 0%,
-    rgba(36, 41, 46, 1) 50%,
-    rgba(27, 31, 34, 1) 100%
-  );
-  background: linear-gradient(
-    180deg,
-    rgba(45, 51, 57, 1) 0%,
-    rgba(36, 41, 46, 1) 50%,
-    rgba(27, 31, 34, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2d3339",endColorstr="#1b1f22",GradientType=1);
+  background: $darkBackground;
+  @include gradient(to bottom left, $backgroundConfig);
   padding: 0;
   margin: 0;
   font-family: $font;
