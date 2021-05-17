@@ -1,14 +1,19 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+
+import logo from '../../images/logo.svg'
 import Navbar from '../Navbar/Navbar'
-import { header, contact__btn } from './header.module.scss'
+
+import { header, contact__btn, image__wrapper } from './header.module.scss'
 
 const Header = () => (
   <header className={header}>
-    <h1>Lf</h1>
+    <div className={image__wrapper}>
+      <img src={logo} alt='Leonardo Fernandez Web Developer' />
+    </div>
     <Navbar />
     <Link className={contact__btn} to='/contact'>
-      Contact
+      Contact me!
     </Link>
   </header>
 )
