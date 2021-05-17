@@ -3,14 +3,50 @@
 
 .navbar {
   a {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-family: $font;
     color: $white;
     text-decoration: none;
-    margin-right: 1.2rem;
+    margin-right: 1rem;
+    transition: all 0.3s ease-out;
+    position: relative;
+    width: 95%;
+    height: 0.1rem;
+
+    &:hover,
+    &:focus {
+      color: $primaryColor;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -25%;
+      left: 0;
+      transition: all 0.3s ease-out;
+      width: 0;
+      height: 0;
+    }
+
+    &:hover::after {
+      width: 95%;
+      height: 2px;
+      background-color: $primaryColor;
+    }
+
+    svg {
+      font-size: 1.8rem;
+    }
 
     &:last-child {
       margin-right: 0;
+      border-right: none;
     }
+  }
+}
+
+.active {
+  svg {
+    color: $primaryColor;
   }
 }
