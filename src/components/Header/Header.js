@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 import logo from '../../images/logo.svg'
 import Navbar from '../Navbar/Navbar'
@@ -12,9 +12,9 @@ const Header = () => (
       <img src={logo} alt='Leonardo Fernandez Web Developer' />
     </div>
     <Navbar />
-    <Link className={contact__btn} to='/contact'>
+    <AniLink swipe direction='down' className={contact__btn} to='/contact'>
       Contact me!
-    </Link>
+    </AniLink>
   </header>
 )
 
