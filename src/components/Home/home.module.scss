@@ -6,9 +6,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 6rem 0;
+
+  @include for-large-tablet-only {
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 0;
+    .presentation {
+      margin-bottom: 2rem;
+      padding: 0;
+      text-align: center;
+    }
+  }
 }
 .presentation {
-  flex: 1 1 0%;
+  flex: 1;
   color: $white;
   padding-right: 2rem;
   h1 {
@@ -20,7 +31,7 @@
   }
 }
 .presentation__image {
-  flex: 1 1 0%;
+  flex: 1;
 
   img {
     width: 100%;

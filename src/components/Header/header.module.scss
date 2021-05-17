@@ -9,7 +9,7 @@
   margin: 0 auto;
   padding: 3rem 0 2.5rem 0;
 
-  @include for-phone-only {
+  @include for-small-tablet-only {
     padding: 2rem 0;
     flex-direction: column;
     width: 100%;

@@ -5,10 +5,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 2rem;
+
+  @include for-large-tablet-only {
+    flex-direction: column;
+  }
 }
 .contact__form {
   flex: 1;
   padding-right: 2rem;
+  width: 100%;
   input,
   textarea {
     width: 100%;
