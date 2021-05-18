@@ -19,7 +19,7 @@ const social = [
   {
     id: 2,
     name: 'Email',
-    link: 'leonardo.fernandez1402@gmail.com',
+    link: 'mailto:leonardo.fernandez1402@gmail.com',
     icon: 'simple-icons:gmail',
   },
 ]
